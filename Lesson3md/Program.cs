@@ -31,11 +31,10 @@ namespace Lesson3md
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine(" ");
 
-            var prece = new Prece();
+            var prece = new Prece(0.25, 12, 12, 25);
             prece.Name = "Kaut kas";
             prece.Price = 10.20;
-
-
+            prece.Paramaters();
 
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine(" ");

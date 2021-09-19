@@ -9,18 +9,34 @@ namespace Lesson3md
     public class Prece
     {
 
+        public Prece(double height, double width, double depth, double weight)
+        {
+            Height = height;
+            Width = width;
+            Depth = depth;
+            Weight = weight;
+        }
+
         public string Name { get; set; }
 
         public double Price { get; set; }
 
-        public double Height { get; }
+        private double Height;
 
-        public double Width { get; }
+        private double Width;
 
-        public double Depth { get; }
+        private double Depth;
 
-        public double Weight { get; }
+        private double Weight;
 
-         
+        public void Paramaters() {
+            Console.WriteLine("Parameters: ");
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Price: {Price}");
+            Console.WriteLine($"Depth: {Depth}");
+            Console.WriteLine($"Height: {Height}");
+            Console.WriteLine($"Width: {Width}");
+            Console.WriteLine($"Weight: {Weight}");
+        }
     }
 }
