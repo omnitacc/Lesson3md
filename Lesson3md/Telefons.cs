@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson3md
 {
-    class Telefons
+    public class Telefons
     {
         public Telefons(double height, double width, double depth)
         {
