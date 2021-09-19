@@ -8,13 +8,23 @@ namespace Lesson3md
 {
     public class Person
     {
-        public Person(string name, string surname, string dateOfBirth, bool isMale)
+        private DateTime dateOfBirth;
+        public Person(string name, string surname, string dateOfBirthText, bool isMale)
         {
             IsMale = isMale;
-            DateOfBirthText = dateOfBirth;
+            DateOfBirth = dateOfBirthText;
+            dateOfBirth = Convert.ToDateTime(DateOfBirth);
             Name = name;
             Surname = surname;
         }
+        public Person(string name, string surname, bool isMale)
+        {
+            IsMale = isMale;
+            Name = name;
+            Surname = surname;
+            dateOfBirth = Convert.ToDateTime(DateOfBirth);
+        }
+
 
         public string Name { get; set; }
 
@@ -33,26 +43,23 @@ namespace Lesson3md
             }
         }
 
-        public DateTime dateOfBirth;
-        string DateOfBirthText;
-        public string DateOfBirth
-        {
-            get 
-            {
-                return DateOfBirthText;
-            } 
-            set 
-            {
-                dateOfBirth = Convert.ToDateTime(DateOfBirthText);
-            }
-        }
+        public string DateOfBirth { get; set; }
 
+
+        public string SayDateOFBirth() 
+        {
+            return DateOfBirth;
+        }
         
 
         public bool IsMale { get; set; }
 
-        public int Age(DateTime dateOfBirth)
+
+
+
+        public int Age()
         {
+            dateOfBirth = Convert.ToDateTime(DateOfBirth);
             int age = 0;
             age = DateTime.Now.Year - dateOfBirth.Year;
             if (DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
@@ -64,12 +71,12 @@ namespace Lesson3md
 
         public string SayHello()
         {
-            return $"Hello, may Name is {Name}{Surname}";
+            return $"Hello, may Name is {Name} {Surname}";
         }
 
         public string SayAge()
         {
-            return $"My age is {Age(DateOfBirth)}";
+            return $"My age is {Age()}";
         }
     }
 }

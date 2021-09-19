@@ -40,12 +40,15 @@ namespace Lesson3md
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine(" ");
 
-            var person = new Person("Testa","Persona", "10.10.1990", true);
+            //var person = new Person("Testa","Persona", true);
+            var person = new Person("Testa", "Persona","10/09/1990", true);
 
             person.Name = "Vards";
             person.Surname = "Surname";
-
-            Console.WriteLine(person.SayHello() + ", "+ person.SayAge());
+            person.DateOfBirth = "03/03/1994";
+            person.IsMale = false;
+ 
+            Console.WriteLine(person.SayHello() + ", "+ person.SayAge()+" is male: {0}", person.IsMale);
 
 
         }
