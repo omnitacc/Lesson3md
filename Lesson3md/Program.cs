@@ -16,6 +16,37 @@ namespace Lesson3md
             phone.Depth = 5.5;
 
             Console.WriteLine(phone.GetNaming()+" and "+ phone.GetSize());
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine(" ");
+
+            var auto = new Auto("AUDI", 0, "LV-1234");
+            auto.Marka = "AUDI";
+            auto.Numurzime = "LV-4321";
+            auto.Speed = 100;
+
+            auto.StartMoving(50);
+            auto.Horn();
+            auto.IncreasseSpeed(50, 70);
+            auto.StopMoving(70);
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine(" ");
+
+            var prece = new Prece();
+            prece.Name = "Kaut kas";
+            prece.Price = 10.20;
+
+
+
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine(" ");
+
+            var person = new Person("Testa","Persona", "10.10.1990", true);
+
+            person.Name = "Vards";
+            person.Surname = "Surname";
+
+            Console.WriteLine(person.SayHello() + ", "+ person.SayAge());
+
 
         }
     }

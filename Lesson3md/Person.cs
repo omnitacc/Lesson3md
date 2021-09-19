@@ -8,10 +8,10 @@ namespace Lesson3md
 {
     public class Person
     {
-        public Person(string name, string surname, DateTime dateOfBirth, bool isMale)
+        public Person(string name, string surname, string dateOfBirth, bool isMale)
         {
             IsMale = isMale;
-            DateOfBirth = dateOfBirth;
+            DateOfBirthText = dateOfBirth;
             Name = name;
             Surname = surname;
         }
@@ -33,9 +33,9 @@ namespace Lesson3md
             }
         }
 
-        public DateTime DateOfBirth;
+        public DateTime dateOfBirth;
         string DateOfBirthText;
-        public string BirthDateText 
+        public string DateOfBirth
         {
             get 
             {
@@ -43,7 +43,7 @@ namespace Lesson3md
             } 
             set 
             {
-                DateOfBirth = Convert.ToDateTime(DateOfBirthText);
+                dateOfBirth = Convert.ToDateTime(DateOfBirthText);
             }
         }
 
@@ -59,12 +59,6 @@ namespace Lesson3md
                 age = age - 1;
 
             return age;
-        }
-
-
-        public string GetSize()
-        {
-            return $"Phone size is {Height} in height, {Width} in width, {Depth} in depth";
         }
 
 

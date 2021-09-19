@@ -21,16 +21,10 @@ namespace Lesson3md
 
         public double Speed { get; set; }
 
-        public double Width { get; set; }
-
-        public string GetSize()
-        {
-            return $"Phone size is {Height} in height, {Width} in width, {Depth} in depth";
-        }
 
         public string GetNaming()
         {
-            return $"Phone is made by {Marka} and called {Modelis}";
+            return $"This car is made by {Marka}";
         }
 
         public double IncreasseSpeed(double speedNow, double speedNeeded)
